@@ -57,6 +57,8 @@ Plan your work, and work your plan.
 
 ## Requirements For This Lab
 
+**Note: There's a lot of moving pieces in this assignment, and more details to attend to than it might seem at first. Build methodically, in small pieces, that you test and check regularly. ACP regularly on at least one non-master branch. Sketching out a plan and breaking down the problem conceptually before getting into the code.**
+
 * Scaffold your repo with the usual README, CSS, JS, and HTML files.
 * Hard code your products data which should include:
     ```js
@@ -83,18 +85,6 @@ Plan your work, and work your plan.
 * Upon receiving a click, as long as total is less than 25, three new non-duplicating random images need to be automatically displayed. In other words, the three images that are displayed should contain no duplicates, nor should they duplicate with any images that we displayed immediately before. (HINT: store the last image set on the `App`)
 * After 25 selections have been made, redirect to `user-summary.html`
 * User summary can have very rudimentary list with something like "3 votes for the Banana Slicer showed 6 times".
-
-## Goals For This Lab
-
-**Note: There's a lot of moving pieces in this assignment, and more details to attend to than it might seem at first. Build methodically, in small pieces, that you test and check regularly. ACP regularly on at least one non-master branch. Sketching out a plan and breaking down the problem conceptually before getting into the code.**
-
-* Write your user stories as described above and place them in a file called `user_stories.md` in your repo. Utilize good Markdown style to make this document look nice.
-* Scaffold your repo with the usual structure and files we have been using
-* There are images in the `assets/` directory. You will need to create a static "products" array
-* The thing you want to build today will select three random photos from the image directory and display them side-by-side-by-side in the browser window.
-* In addition, you'll want to be able to receive clicks on those displayed images, and track those clicks for each image. You'll also want to track how many times each image is displayed, for statistical purposes.
-* Upon receiving a click, three new non-duplicating random images need to be automatically displayed. In other words, the three images that are displayed should contain no duplicates, nor should they duplicate with any images that we displayed immediately before.
-* After 25 selections have been made, stop listening on the images (to prevent additional voting) and also display a list of the products with votes received with each list item looking like "3 votes for the Banana Slicer showed 6 times".
 
 ## Stretch Goals For This Lab
 
