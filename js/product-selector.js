@@ -1,11 +1,12 @@
 import html from './js/html.js';
+import ProductCard from './product-card';
 
 function makeTemplate() {
     return html`
    <h1>BUS MALL</h1>
         <section>
-            
-            <li class="products">Product Selector</li>
+          <>  
+           
         </section>
     `;
 }
