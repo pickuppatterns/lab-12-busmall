@@ -1,33 +1,42 @@
-import html from './js/html.js';
-import ProductCard from './product-card';
+import html from './html.js';
+import ProductCard from './product-card.js';
 
 function makeTemplate() {
     return html`
-   <h1>BUS MALL</h1>
         <section>
-          <>  
-           
+        <h2>product selector component</h2>
+          <ul class="product-cards"></ul>
         </section>
     `;
 }
-class ProductSelector {
-    constructor(product){
-        this.products = product;
-        // this.image = image;
-    }
+export default class ProductSelector { 
 
+    constructor(products){
+        this.products = products;
+    }
+     
+    
     render() {
         const dom = makeTemplate();
-        // console.log(this.product);
         //need to append an li to a ul
-        this.list = dom.querySelector(['li']);
-        // li.textContent = this.products[0].name;
-        this.list = dom.querySelector('ul');
-
-
+       
+        
+        const productCardSection = dom.querySelector('ul');
+        // const productCard = new ProductCard();
+        // this.products.forEach(name => {
+        //     const productCard = new ProductCard();
+        // });
+        
+        for(let i = 0; i < 3; i++) {
+            const productCard = new ProductCard(this.products[Math.floor(Math.random())]);
+            productCardSection.appendChild(productCard.render());
+        }
+        
+            //need to get the render method off of the product card
+        
+//
         return dom;
     }
 }
+    
 
-
-export default ProductSelector;
