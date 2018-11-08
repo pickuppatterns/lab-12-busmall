@@ -14,8 +14,9 @@ function makeTemplate() {
 
 export default class ProductCard {
     
-    constructor(product) {
+    constructor(product, onSelect) {
         this.product = product;
+        this.onSelect = onSelect; 
         
     }
     render() {
@@ -24,6 +25,14 @@ export default class ProductCard {
         image.src = this.product.image;
         const name = dom.querySelector('p');
         name.textContent = this.product.name;
+       
+        let li = dom.querySelector('li');
+        li.addEventListener('click', () => {
+            this.onSelect(this.product);
+            // console.log('I am clicked');
+        });
+
         return dom;
+        
     }
 }

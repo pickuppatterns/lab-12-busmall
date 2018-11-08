@@ -13,6 +13,7 @@ export default class ProductSelector {
 
     constructor(products){
         this.products = products;
+        
     }
      
     
@@ -28,15 +29,24 @@ export default class ProductSelector {
         // });
         
         for(let i = 0; i < 3; i++) {
-            const productCard = new ProductCard(this.products[Math.floor(Math.random())]);
+            const productCard = new ProductCard(this.products[i], selected => {
+
+                // console.log(selected);
+
+            });
             productCardSection.appendChild(productCard.render());
         }
+
         
             //need to get the render method off of the product card
         
 //
         return dom;
+        
     }
+   
+    
 }
+
     
 
