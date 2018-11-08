@@ -19,7 +19,7 @@ class SurveyApp{
         const dom = makeTemplate();
         const productSelectorSection = dom.querySelector('.product-selector');
         const productSelector = new ProductSelector(products); 
-        productSelectorSection.appendChild(productSelector.render() );
+        productSelectorSection.appendChild(productSelector.render());
         
         return dom;
         
