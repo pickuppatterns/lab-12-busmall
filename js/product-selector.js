@@ -15,7 +15,7 @@ export default class ProductSelector {
         this.products = products;
         
     }
-     
+    // const crapshoot =>  
     
     render() {
         const dom = makeTemplate();
@@ -23,15 +23,12 @@ export default class ProductSelector {
        
         
         const productCardSection = dom.querySelector('ul');
-        // const productCard = new ProductCard();
-        // this.products.forEach(name => {
-        //     const productCard = new ProductCard();
-        // });
+       
         
         for(let i = 0; i < 3; i++) {
             const productCard = new ProductCard(this.products[i], selected => {
 
-                // console.log(selected);
+                console.log(selected);
 
             });
             productCardSection.appendChild(productCard.render());
