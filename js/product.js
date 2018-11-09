@@ -59,6 +59,51 @@ export default [
         image: '../assets/pen.jpg',
         
     }
+    ,
+    {
+        name: 'pet-sweep',
+        image: '../assets/pet-sweep.jpg',
+        
+    },
+    {
+        name: 'scissors',
+        image: '../assets/scissors.jpg',
+        
+    },
+    {
+        name: 'shark',
+        image: '../assets/shark.jpg',
+        
+    },
+    {
+        name: 'sweep',
+        image: '../assets/sweep.png',
+        
+    },
+    {
+        name: 'tauntaun',
+        image: '../assets/tauntaun.jpg',
+        
+    },
+    {
+        name: 'unicorn',
+        image: '../assets/unicorn.jpg',
+        
+    },
+    {
+        name: 'usb',
+        image: '../assets/usb.gif',
+        
+    },
+    {
+        name: 'water-can',
+        image: '../assets/water-can.jpg',
+        
+    },{
+        name: 'wine-glass',
+        image: '../assets/wine-glass.jpg',
+        
+    }
 ];
 
 
