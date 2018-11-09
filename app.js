@@ -6,6 +6,8 @@ import ProductSelector from './js/product-selector.js';
 const products = productsApi.getAll();
 
 
+
+
 function makeTemplate() {
     return html`
         <main>

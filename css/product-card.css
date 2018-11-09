@@ -1,4 +1,25 @@
-#product-card {
-   display:none; 
+
+.product-selector ul {
+    margin:0 auto;
+    border:solid #0099ff 10px; 
+    list-style-type: none;
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-evenly; 
+    padding: 0;
+    margin:0;
+
     
+}
+.product-selector {
+    height: 250px;
+
+}
+.product-card {
+    border:solid #000000 3px;
+    flex-basis: 30vw; 
+    
+}
+img {
+    width:100%;
 }
