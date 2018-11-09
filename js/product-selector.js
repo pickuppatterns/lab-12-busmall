@@ -21,27 +21,40 @@ export default class ProductSelector {
 
         return product;
     }
-    render() {
-        const dom = makeTemplate();
-        //need to append an li to a ul
-        
-        
-        const productCardSection = dom.querySelector('ul');
-        
-        
-        
+    showRandomImages(){
         for(let i = 0; i < 3; i++) {
             const randomProduct = this.getRandomImages();
             const productCard = new ProductCard(randomProduct, (selected) => {
                 // console.log('randomProduct', randomProduct);
                 selected.clicks++;
-                // console.log('selected', selected);
+                this.clearImages();
+                this.showRandomImages();
+                console.log('selected', selected);
             });
-            productCardSection.appendChild(productCard.render());
-            
+            this.productCardSection.appendChild(productCard.render());
         }
 
+    }
+    clearImages(){
+        while(this.productCardSection.lastElementChild){
+            this.productCardSection.lastElementChild.remove();
+        }
+    }
+    
+
+    render() {
+        const dom = makeTemplate();
+        //need to append an li to a ul
+        
+      
+        
+        this.productCardSection = dom.querySelector('ul');
+        this.showRandomImages();
+        
+        
+
         return dom;
+        
         
     }   
 }
