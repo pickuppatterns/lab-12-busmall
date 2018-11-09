@@ -11,7 +11,6 @@ function makeTemplate() {
         </li> 
     `;
 }
-
 export default class ProductCard {
     
     constructor(product, onSelect) {

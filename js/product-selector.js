@@ -14,10 +14,10 @@ export default class ProductSelector {
     constructor(products){
         this.products = products; 
     }
+    
     getRandomImages() {
         let index = getRandomIndex(this.products.length);
         let product = this.products[index];
-        
 
         return product;
     }
@@ -33,26 +33,18 @@ export default class ProductSelector {
         for(let i = 0; i < 3; i++) {
             const randomProduct = this.getRandomImages();
             const productCard = new ProductCard(randomProduct, (selected) => {
+                // console.log('randomProduct', randomProduct);
                 selected.clicks++;
+                // console.log('selected', selected);
             });
             productCardSection.appendChild(productCard.render());
+            
         }
-        
-        
-        
-        //need to get the render method off of the product card
-        
-        //
+
         return dom;
         
-    }
-    
-    
+    }   
 }
-
-
-
-
 function getRandomIndex(length) {
     // this.product.image;
     return Math.floor(Math.random() * length);

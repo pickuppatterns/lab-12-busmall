@@ -99,11 +99,10 @@ export default [
         name: 'water-can',
         image: '../assets/water-can.jpg',
         
-    },{
+    }, 
+    {
         name: 'wine-glass',
         image: '../assets/wine-glass.jpg',
         
     }
 ];
-
-
