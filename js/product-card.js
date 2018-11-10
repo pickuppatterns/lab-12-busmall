@@ -30,6 +30,7 @@ export default class ProductCard {
             this.onSelect(this.product);
             // console.log('I am clicked');
         });
+        this.product.views++;
         
 
         return dom;
