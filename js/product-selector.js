@@ -9,6 +9,8 @@ function makeTemplate() {
         </section>
     `;
 }
+
+let count = 0; 
 export default class ProductSelector { 
     
     constructor(products, onSelect, onView) {
@@ -37,6 +39,11 @@ export default class ProductSelector {
             const productCard = new ProductCard(randomProducts[i], (selected) => {
                 // console.log('randomProduct', randomProduct);
                 selected.clicks++;
+                count++;
+                if(count === 25) {
+                    window.location = './report.html';
+                }
+                console.log('counter', count);
                 this.update();
                 this.showRandomImages();
                 // console.log('selected', selected);
@@ -62,7 +69,8 @@ export default class ProductSelector {
         return dom;
         
         
-    }   
+    } 
+     
 }
 function getRandomIndex(length) {
     // this.product.image;
